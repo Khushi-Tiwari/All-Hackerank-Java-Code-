@@ -1,0 +1,57 @@
+SOLUTION - 
+
+import java.util.Scanner;
+
+public class Solution {
+
+    public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("================================");
+            for (int i = 0; i<3; i++) {
+                String s1 = sc.next();
+                int x = sc.nextInt();
+                System.out.format("%-15s%03d%n", s1, x);
+            }
+            System.out.println("================================");
+    }
+}
+
+
+**************************************************************************************************
+**************************************************************************************************
+EXPLANATION - 
+
+First of all we will use System.out.format instead of System.out.println as it is use to format the output. So our code will be –> System.out.format();
+Next we will use Modulus(%) within double quote. So our code will be –> System.out.format(“% “);
+Next we will use ‘-‘ after modulus which will instruct the compiler that it will be left indent, if you want to use right indent do not use “-“. So our code will be –> System.out.format(“%- “);
+The 15 makes our String to be a minimum length of 15, it is required as per the question. So our code will be –> System.out.format(“%-15”);
+s will be substituted by our String. This will mark the end of first requirement. So our code will be –> System.out.format(“%-15s”);
+Now the second part of the question. So again we will put %  and put 3d in order to  format integer. The 3 makes our integer be a minimum length of 3. So our code will be –> System.out.format(“%-15s%3d”);
+%n will help to go to the next line 🙂
+
+
+***************************************************************************************************
+***************************************************************************************************
+QUESTION - 
+The challenge here is to read  lines of input until you reach EOF, then number and print all  lines of content.
+
+Hint: Java's Scanner.hasNext() method is helpful for this problem.
+
+Input Format
+
+Read some unknown  lines of input from stdin(System.in) until you reach EOF; each line of input contains a non-empty String.
+
+Output Format
+
+For each line, print the line number, followed by a single space, and then the line content received as input.
+
+Sample Input
+
+Hello world
+I am a file
+Read me until end-of-file.
+Sample Output
+
+1 Hello world
+2 I am a file
+3 Read me until end-of-file.
