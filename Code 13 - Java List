@@ -1,0 +1,45 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+         Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        
+         List<Integer> l = new ArrayList<>();
+        
+        for(int i = 0 ;i<n;i++)
+        {
+         l.add(sc.nextInt());   
+        }
+        
+        int rounds = sc.nextInt();
+        
+        while(rounds-- >0)
+        {
+          switch(sc.next())
+          {
+              case "Insert":
+              l.add(sc.nextInt(),sc.nextInt());
+              break;
+              
+              case "Delete":
+              l.remove(sc.nextInt());
+              break;
+              
+              default:
+              System.out.println("Invalid operation");
+              System.exit(-1);
+              break;
+          }  
+        }
+       sc.close();
+      for (Integer i : l) {
+            System.out.print(i + " ");
+   }   
+       
+    }
+    }
+
